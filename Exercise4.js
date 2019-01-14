@@ -4,13 +4,13 @@
 //var CTEMP = Math.round((FTEMP - 32) * 5 / 9);
 //BONUS: Keep prompting until the User actually enters a number (HINT: Look into using NaN)
 
-var FTEMP;
-var CTEMP = Math.round((FTEMP - 32) * 5 / 9);
 
-do{
+var FTEMP =parseInt(prompt(" "));
+
+}
+while(isNaN(FTEMP)){
     FTEMP = parseInt(prompt("Enter the temperature:"));
 }
-while(isNaN(FTEMP) || FTEMP%1!==0);
-
+var CTEMP = Math.round((FTEMP - 32) * 5 / 9);
 console.log("FTEMP Fahrenheit equals "+ CTEMP +" in Celcius");
 
